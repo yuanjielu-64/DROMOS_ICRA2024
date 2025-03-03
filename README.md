@@ -3,8 +3,8 @@
   </p>
 
 
-# Multi-Goal Motion Memory
-A novel approach for efficient multi-goal motion planning in complex environments
+# DROMOS (Multi-Goal Motion Memory)
+This project is the baseline named DROMOS for multi-goal motion memory, more details are described in the paper named "Multi-group motion planning in virtual environments"
 
 ## Language
 This code is written in C++ 
@@ -20,6 +20,9 @@ Neural network models implemented in Python 3.8 with PyTorch 2.2.2
 These specifications are recommendations; if you encounter any issues during setup, please contact us for assistance (ylu22@gmu.edu).
 
 ## Run Simulations
+You still need to download the Treelite dependency (though it is not useful for baseline), otherwise, we cannot run the code
+
+
 First, install the Treelite dependency from https://treelite.readthedocs.io/en/latest/
 
 1. Download the treelite
@@ -32,7 +35,7 @@ cmake ..
 cd ..
 ```
 
-2. Build Multi-Goal Motion Memory
+2. Build DROMOS
 ```
 cd ..
 ./build.sh
@@ -44,21 +47,26 @@ python GenerateResults.py --scene SCENE --planner PLANNER --grid GRID_SIZE
 ```
 Parameters:
 SCENE: "Random", "Curves", "Maze", and "Storage".
-PLANNER: "Dromos"
+PLANNER: "Juve" or "RRT"
 GRID_SIZE: 2, 3, 4
-In this code, "Dromos" represents "Multi-Goal Motion Memory"
+In this baseline, "Juve" represents "DROMOS", "RRT" represents "SequentialRRT"
 ```
-python GenerateResults.py --scene Random --planner Dromos --grid 2
+python GenerateResults.py --scene Random --planner Juve --grid 2
 ```
 
 4. Visualize Simulations
+To visualize the scenarios, some manual operations are required. While I haven't implemented automatic map correspondence in C++ yet, I have completed this functionality in GenerateResults.py
+
+You need to do the following:
+Go to data/ change the obstacle info in ParamsSceneCurvesForCar.txt, see the line 8, change the file. For example, scene = Curves, planner = Juve, grid = 3, obstacle id = 0
+
 Run specific scenarios with visualization:
 ```
-./bin/Runner GRunMP data/ParamsSceneCurvesForCar.txt ParamsExtraFile data/Instances/CurvesCarNrGrids2/0.txt MGMMPredictLabel data/PredictLabel/ UseMP Dromos UseMap Curves PlannerStatsFile data/Results/DromosCurvesForCar_2.txt UseGrid 2 UseObstacle 0 TopNumber 5
+./bin/Runner GRunMP data/ParamsSceneCurvesForCar.txt ParamsExtraFile data/Instances/CurvesCarNrGrids3/0.txt MGMMPredictLabel data/PredictLabel/ UseMP Juve UseMap Curves PlannerStatsFile data/Results/JuveCurvesForCar_2.txt UseGrid 3 UseObstacle 0 TopNumber 5
 ```
 Or try different environments:
 ```
-./bin/Runner GRunMP data/ParamsSceneRandomForCar.txt ParamsExtraFile data/Instances/RandomCarNrGrids4/1.txt MGMMPredictLabel data/PredictLabel/ UseMP Dromos UseMap Random PlannerStatsFile data/Results/DromosRandomForCar_4.txt UseGrid 4 UseObstacle 1 TopNumber 5
+./bin/Runner GRunMP data/ParamsSceneMazeForCar.txt ParamsExtraFile data/Instances/MazeCarNrGrids4/0.txt MGMMPredictLabel data/PredictLabel/ UseMP RRT UseMap Maze PlannerStatsFile data/Results/RRTMazeForCar_4.txt UseGrid 4 UseObstacle 0 TopNumber 5
 ```
 When the visualization appears:
 1. Right-click on "Motion Planner"

@@ -5,7 +5,7 @@ Scene2D
 {
    Grid { NrDims 2 Dims [64 64] Min [0.0 0.0] Max [50.0 50.0] }
    ObstacleHeight 1.0
-   ObstaclesPolygonsFile data/Obstacles/Curves_3/50.txt
+   ObstaclesPolygonsFile data/Obstacles/Curves_3/0.txt
    Boundaries { Thickness 1.0 Height 2.0 }
 }
 

@@ -1,11 +1,25 @@
-NAME : atsp.17.tour
-COMMENT : Length = 17
-COMMENT : Found by LKH-3 [Keld Helsgaun] Mon Mar  3 16:36:36 2025
+NAME : atsp.143.tour
+COMMENT : Length = 143
+COMMENT : Found by LKH-3 [Keld Helsgaun] Mon Mar  3 17:25:41 2025
 TYPE : TOUR
-DIMENSION : 3
+DIMENSION : 17
 TOUR_SECTION
 1
 2
+5
+6
+10
+9
+13
+14
+15
+16
+11
+12
+8
+7
 3
+4
+17
 -1
 EOF

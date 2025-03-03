@@ -1,6 +1,6 @@
 PARAMETER_FILE = LKHs/LKHparams.txt
 Reading PROBLEM_FILE: "LKHs/LKHprob.txt" ... done
-ASCENT_CANDIDATES = 5
+ASCENT_CANDIDATES = 33
 BACKBONE_TRIALS = 0
 BACKTRACKING = NO
 # BWTSP =
@@ -9,7 +9,7 @@ CANDIDATE_SET_TYPE = ALPHA
 # DISTANCE =
 # DEPOT =
 # EDGE_FILE =
-EXCESS = 0.333333
+EXCESS = 0.0588235
 EXTERNAL_SALESMEN = 0
 EXTRA_CANDIDATES = 0 
 EXTRA_CANDIDATE_SET_TYPE = QUADRANT
@@ -26,8 +26,8 @@ KICKS = 1
 # MAX_BREADTH =
 MAKESPAN = NO
 MAX_CANDIDATES = 5 
-MAX_SWAPS = 6
-MAX_TRIALS = 6
+MAX_SWAPS = 34
+MAX_TRIALS = 34
 # MERGE_TOUR_FILE =
 MOVE_TYPE = 5 
 # MTSP_MIN_SIZE =
@@ -42,7 +42,7 @@ PATCHING_C = 3
 # PI_FILE = 
 POPMUSIC_INITIAL_TOUR = NO
 POPMUSIC_MAX_NEIGHBORS = 5
-POPMUSIC_SAMPLE_SIZE = 6
+POPMUSIC_SAMPLE_SIZE = 10
 POPMUSIC_SOLUTIONS = 50
 POPMUSIC_TRIALS = 1
 # POPULATION_SIZE = 0
@@ -65,15 +65,18 @@ SUBSEQUENT_PATCHING = YES
 TRACE_LEVEL = 1
 VEHICLES = 1
 
-Lower bound = 17.0, Ascent time = 0.00 sec.
-Cand.min = 2, Cand.avg = 2.0, Cand.max = 2
-Edges.fixed = 3 [Cost = 0]
+Lower bound = 141.4, Ascent time = 0.00 sec.
+Cand.min = 2, Cand.avg = 4.8, Cand.max = 5
+Edges.fixed = 17 [Cost = 0]
 Preprocessing time = 0.00 sec.
+* 1: Cost = 143, Time = 0.00 sec.
 Writing OUTPUT_TOUR_FILE: "LKHs/LKHsol.txt" ... done
-Successes/Runs = 1/0 
-Cost.min = 17, Cost.avg = 17.00, Cost.max = 17
+Run 1: Cost = 143, Time = 0.00 sec.
+
+Successes/Runs = 0/1 
+Cost.min = 143, Cost.avg = 143.00, Cost.max = 143
 Gap.min = 0.0000%, Gap.avg = 0.0000%, Gap.max = 0.0000%
-Trials.min = 0, Trials.avg = 0.0, Trials.max = 0
+Trials.min = 34, Trials.avg = 34.0, Trials.max = 34
 Time.min = 0.00 sec., Time.avg = 0.00 sec., Time.max = 0.00 sec.
 Time.total = 0.00 sec.
 

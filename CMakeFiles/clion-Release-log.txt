@@ -1,0 +1,4 @@
+Cannot generate into /home/yuanjielu/Desktop/Motion_Planning_Project/ICRA2024/experiments/dromos_rrt
+It was created with incompatible generator 'Unix Makefiles'
+
+Please either delete it manually or select another generation directory
