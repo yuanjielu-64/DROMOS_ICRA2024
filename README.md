@@ -58,7 +58,8 @@ python GenerateResults.py --scene Random --planner Juve --grid 2
 To visualize the scenarios, some manual operations are required. While I haven't implemented automatic map correspondence in C++ yet, I have completed this functionality in GenerateResults.py
 
 You need to do the following:
-Go to data/ change the obstacle info in ParamsSceneCurvesForCar.txt, see the line 8, change the file. For example, scene = Curves, planner = Juve, grid = 3, obstacle id = 0
+Go to data/ change the obstacle info in ParamsSceneCurvesForCar.txt, see the line 8, change the file. For example, planner = Juve, grid = 3, obstacle id = 0
+If you want to change the obstacle in Random, then go to ParamsSceneRandomForCar.txt
 
 Run specific scenarios with visualization:
 ```
